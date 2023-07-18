@@ -1,0 +1,10 @@
+body {
+  background-color: white;
+  color: black;
+}
+
+tr, td {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=App.css.map */

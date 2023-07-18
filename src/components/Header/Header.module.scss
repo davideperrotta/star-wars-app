@@ -1,0 +1,15 @@
+.navLink, .navLink:link, button {
+    font-size: 15px;
+    color: black !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
