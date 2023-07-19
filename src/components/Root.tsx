@@ -39,7 +39,7 @@ function Root (props: any) {
             if (el.hasOwnProperty('name')) {
               return el.name.toLowerCase().includes(filter) && el;
             }
-            if (el.hasOwnProperty('name')) {
+            if (el.hasOwnProperty('title')) {
               return el?.title.toLowerCase().includes(filter) && el;
             }
           });
