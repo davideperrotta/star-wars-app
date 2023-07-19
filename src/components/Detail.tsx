@@ -49,7 +49,7 @@ function Detail () {
                     </Typography>
                 )}
                 <ButtonGroup variant="outlined" aria-label="outlined button group">
-                    <Button onClick={() => {navigate(-1)}}>{PageLabels.Back}</Button>
+                    <Button onClick={() => {navigate(`/${type}`)}}>{PageLabels.Back}</Button>
                 </ButtonGroup>
             </header>
             <div className={appStyles.container}>

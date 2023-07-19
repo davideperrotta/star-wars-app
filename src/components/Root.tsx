@@ -16,11 +16,11 @@ function Root (props: any) {
     const submit = useSubmit();
 
     useEffect(() => {
-      let page = window.location.pathname;
+      let page = type;
       if (page === '/') {
         page = PageLinks.All;
       }
-      submit(null, { action: page, method: 'post' });
+      submit(null, { action: `/${type}`, method: 'post' });
     }, [])
 
     useEffect(() => {

@@ -57,7 +57,7 @@ function App() {
       },
       loader,
     }
-  ]);
+  ], { basename: "/star-wars-app" });
 
   return (
     <div className={styles.App}>
