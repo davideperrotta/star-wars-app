@@ -16,7 +16,7 @@ export const enum PageLabels {
     Films = 'Films',
     Species = 'Species',
     All = 'All',
-    Back = 'Back',
+    Back = 'Back to category',
     Next = 'Next',
     DetailsHeading = 'Details for:',
 }

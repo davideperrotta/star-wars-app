@@ -12,7 +12,7 @@ import styles from './Table.module.scss';
 import { useSubmit } from 'react-router-dom';
 
 function TableSW (props: any) {
-  const { tableData, rowLimit, isDetailPage, type } = props;
+  const { tableData, rowLimit, isDetailPage, type, filter } = props;
 
   const submit = useSubmit();
 
@@ -44,8 +44,11 @@ function TableSW (props: any) {
 
   useEffect(() => {
     const paginatedValues = rows.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
-    if (paginatedValues.length > 0) {
+    if (!filter && paginatedValues.length > 0) {
       setPaginatedRows(paginatedValues);
+    }
+    if (filter) {
+      setPaginatedRows(rows);
     }
   }, [rows, page]);
 
