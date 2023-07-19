@@ -4,7 +4,6 @@ import Root from './components/Root';
 import Detail from './components/Detail';
 import './App.css';
 import getData from './api/getData';
-import { Skeleton } from '@mui/material';
 
 function App() {
 

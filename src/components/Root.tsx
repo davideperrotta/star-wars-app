@@ -6,6 +6,14 @@ import { Skeleton } from '@mui/material';
 import styles from '../App.module.scss';
 import { PageLinks } from '../types/categories';
 
+export const getSkeletons = (number: number) => {
+  const skeletons = [];
+  for (let i = 1; i <= number; i++) {
+    skeletons.push(<Skeleton key={`skeleton-${i}`} animation="wave" height={50} />); 
+  }
+  return skeletons;
+}
+
 function Root (props: any) {
     const { type = 'all' } = useParams();
     const [tableData, setTableData] = useState<any>([]);
@@ -29,15 +37,6 @@ function Root (props: any) {
       }
     }, [actionData]);
 
-    const getSkeletons = (number: number) => {
-      const skeletons = [];
-      for (let i = 1; i <= number; i++) {
-        skeletons.push(<Skeleton key={`skeleton-${i}`} animation="wave" height={skeletonHeight} />); 
-      }
-      return skeletons;
-    }
-
-    const skeletonHeight = 50;
     return(
         <>
             <Header />
